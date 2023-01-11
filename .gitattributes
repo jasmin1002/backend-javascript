@@ -1,0 +1,21 @@
+# Setting for line ending: LF and CRLF
+
+# All files are checked into the repo with LF
+* text=auto
+
+# These files are checked out using CRLF locally
+*.bat eol=crlf
+
+# Run the following code locally:
+# 1. git add --renormalize . (Mind the dot) // This enforces changes on all remote repo files for * text=auto
+# 2. git rm --cached -r . (Mind the dot) // This enforces changes on all working tree file locally
+# 3. git reset --hard       // This also enforces changes on all working tree file locally
+# 4. git ls-files --eol     // Check update or result on terminal of those setting applied previously
+
+# The output should following this pattern:
+# i/lf    w/crlf  attr/text=auto  file.txt
+
+# where i --> index
+#       w --> working tree
+#       attr --> attribute
+#       filename
